@@ -9,31 +9,37 @@ import androidx.core.view.WindowInsetsCompat
 import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     private val TAG ="INFOTESTE"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
+        setContentView(binding.root)
         setContentView(R.layout.activity_main)
+        binding.txtNome.text="curso kotlin"
         Log.i(TAG, "OnCreate")
 
+
         }
+
     /*2 esta visivel ao usuario*/
     override fun onStart() {
         super.onStart()
         Log.i(TAG, "OnStart")
     }
     /*3 pronta para usar*/
-    override fun onResume() {
+    /*override fun onResume() {
         super.onResume()
         Log.i(TAG, "OnResume")
-    }
+    }*/
     /*4 saindo da activity*/
     override fun onPause() {
         super.onPause()
         Log.i(TAG, "OnPause")
     }
     /*5 esta invisivel ao usuario*/
-    override fun onStop() {
+    /*override fun onStop() {
         super.onStop()
         Log.i(TAG, "OnStop")
     }
@@ -41,5 +47,5 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.i(TAG, "OnDestroy")
-    }
+    }*/
     }

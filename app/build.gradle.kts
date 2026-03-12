@@ -7,7 +7,9 @@ android {
     compileSdk {
         version = release(36)
     }
-
+    viewBinding{
+        enable = true
+    }
     defaultConfig {
         applicationId = "com.example.projetoemulador"
         minSdk = 24
