@@ -2,10 +2,12 @@ package com.example.projetoemulador
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.projetoemulador.databinding.ActivityMainBinding
 import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +20,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setContentView(R.layout.activity_main)
         binding.txtNome.text="curso kotlin"
+        binding.buttonjogo.setOnClickListener {
+            Toast.makeText(this, "JOGA DO", Toast.LENGTH_SHORT).show()
+        }
         Log.i(TAG, "OnCreate")
 
 
